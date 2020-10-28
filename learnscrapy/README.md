@@ -1,4 +1,4 @@
-# Learning How to User Scrapy
+# 学习使用Scrapy爬虫
 - 创建项目
 
     ```scrapy startproject tutorial```
@@ -22,5 +22,10 @@
             spiders/          # a directory where you'll later put your spiders
                 __init__.py
     ```
+
+# 参考
+>https://www.osgeo.cn/scrapy/intro/tutorial.html
+
+>https://github.com/Wooden-Robot/scrapy-tutorial
 
 

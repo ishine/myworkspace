@@ -7,6 +7,8 @@ import re, requests, json
 from scrapy.selector import Selector 
 from mynewspider.items import MynewspiderItem
 from scrapy_splash import SplashRequest
+from scrapy_splash import SplashTextResponse, SplashJsonResponse, SplashResponse
+from scrapy.http import HtmlResponse
 
 
 count = 0
@@ -25,7 +27,8 @@ class News163Spider(CrawlSpider):
     def parse_item(self, response):
         news = Selector(response)
         news_url = response.url
-  
+
+        
         global count
         if news.xpath('//*[@id="epContentLeft"]'):
             

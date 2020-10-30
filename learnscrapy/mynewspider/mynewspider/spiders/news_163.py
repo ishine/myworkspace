@@ -62,11 +62,11 @@ class News163Spider(CrawlSpider):
 
             # 来源 article_source
             article_sourceXpath = '//*[@id="epContentLeft"]/div[1]/a[1]/text()'
-            get_article_souce(news, article_sourceXpath, news_item)
+            get_article_source(news, article_sourceXpath, news_item)
 
             # 来源url article_souce_url
             article_source_urlXpath = '//*[@id="epContentLeft"]/div[1]/a[1]/@href'
-            get_article_souce_url(news, article_source_urlXpath, news_item)
+            get_article_source_url(news, article_source_urlXpath, news_item)
 
             # 简介 abstract
             # 正文 content
@@ -77,7 +77,7 @@ class News163Spider(CrawlSpider):
             news_item['id'] = count
 
             # 编辑 editor
-            editorXpath = '//*[@class="ep-editor"]'
+            editorXpath = '//*[@class="ep-editor"]/text()'
             get_editor(news, editorXpath, news_item)
 
             # 文章热度（跟帖） heat
@@ -94,22 +94,44 @@ class News163Spider(CrawlSpider):
 
 ''' 文章标题 title '''
 def get_title(news, titleXpath, news_item):
-    pass
+    try:
+        news_title = news.xpath(titleXpath).extract()[0]
+        news_title = news_title.replace('\n', '')
+        news_title = news_title.replace('\r', '')
+        news_title = news_title.replace('\t', '')
+        news_title = news_title.replace(' ', '')
+        news_item['title'] = news_title
+    except:
+        news_item['title'] = ''
 
 
 ''' 时间 date '''
 def get_date(news, dateXpath, news_item):
-    pass
+    try:
+        news_date = news.xpath(dateXpath).extract()[0]
+        pattern = re.compile("(\d.*\d)")  # 正则匹配新闻时间
+        news_datetime = pattern.findall(news_date)[0]
+        news_item['date'] = news_datetime
+    except:
+        news_item['date'] = ''
 
 
 ''' 来源 article_source '''
-def get_article_souce(news, article_sourceXpath, news_item):
-    pass
+def get_article_source(news, article_sourceXpath, news_item):
+    try:
+        article_source = news.xpath(article_sourceXpath).get()
+        news_item['article_source'] = article_source
+    except:
+        news_item['article_source'] = ''
 
 
-''' 来源url article_souce_url '''
-def get_article_souce_url(news, article_source_urlXpath, news_item):
-    pass
+''' 来源url article_source_url '''
+def get_article_source_url(news, article_source_urlXpath, news_item):
+    try:
+        article_source_url = news.xpath(article_source_urlXpath).get()
+        news_item['article_source_url'] = article_source_url
+    except:
+        news_item['article_source_url'] = ''
 
 
 '''
@@ -117,12 +139,30 @@ def get_article_souce_url(news, article_source_urlXpath, news_item):
     正文 content
 '''
 def get_content(news, contentXpath, news_item):
-    pass
-
+    try:
+        content_data = news.xpath(contentXpath )
+        article_content = content_data.xpath('string(.)').extract()[0]
+        article_content = str_replace(article_content)
+        news_item['content'] = article_content
+        # 匹配新闻简介，前100个字
+        try:
+            abstract = article_content[0:100]
+            news_item['abstract'] = abstract
+        except:
+            news_item['abstract'] = article_content
+    except:
+        news_item['content'] = ''
+        news_item['abstract'] = ''
 
 ''' 编辑 editor '''
 def get_editor(news, editorXpath, news_item):
-    pass
+    try:
+        editor_data = news.xpath(editorXpath).get()
+        pattern = re.compile('：(.*)')
+        editor = pattern.findall(editor_data)[0]
+        news_item['editor'] = editor
+    except:
+        news_item['editor'] = ''
 
 
 ''' 评论url '''

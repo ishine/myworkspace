@@ -36,10 +36,10 @@ class MynewspiderItem(scrapy.Item):
     # 新闻url
     url = scrapy.Field()
 
-    # 文章热度（跟帖+参与数)
+    # 文章热度（跟帖)
     heat = scrapy.Field()
 
-    # ToDo
+    # To Do
     # 评论字典
-    # comments = scrapy.Field()
+    #comments = scrapy.Field()
 

@@ -59,13 +59,12 @@ class News163Spider(CrawlSpider):
             editorXpath = '//*[@class="ep-editor"]'
             get_editor(news, editorXpath, news_item)
 
-            # 文章热度（跟帖+参与数） heat
-            tiecount = int(news.xpath('//*[@class="js-tiecount js-tielink"]/text()').get())
-            tiejoin = int(news.xpath('//*[@class="js-tiejoincount js-tielink"]/text()').get())
-            news_item['heat'] = tiecount + tiejoin
-            yield news_item
-            # ToDo
+            # 文章热度（跟帖） heat
             # 评论字典 comments
+            commentinfoXpath = '//*[@id="post_comment_area"]/script[5]/text()'
+            comment_url = get_comment_url(news, commentinfoXpath)
+            get_comment(comment_url, news_item)
+            yield news_item
 
         #item['domain_id'] = response.xpath('//input[@id="sid"]/@value').get()
         #item['name'] = response.xpath('//div[@id="name"]').get()
@@ -103,3 +102,94 @@ def get_content(news, contentXpath, news_item):
 ''' 编辑 editor '''
 def get_editor(news, editorXpath, news_item):
     pass
+
+
+''' 评论url '''
+def get_comment_url(news, commentinfoXpath):
+    # 提取新闻评论路径
+    news_info = news.xpath(commentinfoXpath)
+    news_info_text = news_info.extract()[0]
+    # 正则寻找
+    pattern_productKey = re.compile("\"productKey\" :.*")
+    productKey_text = pattern_productKey.findall(news_info_text)[0]
+    productKey = re.findall(r"\"productKey\".*\"(.*)\"", productKey_text)
+    pattern_docId = re.compile("\"docId\" :.*")
+    docId_text = pattern_docId.findall(news_info_text)[0]
+    docId = re.findall(r"\"docId\".*\"(.*)\"", docId_text)
+    comment_url = 'http://comment.news.163.com/api/v1/products/' + productKey[0] + '/threads/' + docId[0] + '/comments/newList?offset=0'
+    return comment_url
+
+
+''' 
+    评论处理函数 
+    # 文章热度（跟帖） heat
+    # 评论字典 comments
+    comments_dict = {
+        'id': ,
+        'username': ,
+        'date_time': ,
+        'content': 
+    }
+'''
+def get_comment(comment_url, news_item):
+    comment_data = requests.get(comment_url).text
+    js_comment = json.loads(comment_data)
+    # 文章热度（跟帖） heat
+    heat = js_comment['newListSize']
+    news_item['heat'] = heat
+    '''
+    comments = []
+    comment_id = 0
+    try:
+        comment_data = requests.get(comment_url).text
+        js_comment = json.loads(comment_data)
+        try:
+            # 文章热度（跟帖） heat
+            heat = js_comment['newListSize']
+            news_item['heat'] = heat
+            
+            js_comments = js_comment['comments']
+            for each, value in js_comment['comments'].items():
+                comment_id += 1
+                comments_dict = {}
+                print(value)
+                
+                # 评论id
+                comments_dict['id'] = comment_id
+                # 评论用户名
+                try:
+                    comments_dict['username'] = value['user']['nickname']
+                except:
+                    comments_dict['username'] = '匿名用户'
+                # 评论时间， datetime格式
+                try:
+                    date_time = value['createTime']
+                    comments_dict['date_time'] = date_time
+                except:
+                    comments['date_time'] = news_item['date']
+                # 评论内容
+                ori_content = value['content']
+                content = str_replace(ori_content)
+                comments_dict['content'] = content
+                comments.append(comments_dict)
+            if comments:
+                print(len(comments), "*************************", heat)
+                return heat, comments
+            else:
+                return 0, ''
+            
+        except:
+            return 0, ''
+    except:
+        return 0, ''
+    '''
+
+
+''' 字符过滤函数 '''
+def str_replace(content):
+    try:
+        article_content = re.sub('[\sa-zA-Z\[\]!/*(^)$%~@#…&￥—+=_<>.{}\'\-:;"‘’|]', '', content)
+        return article_content
+    except:
+        return content
+

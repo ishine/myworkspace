@@ -43,12 +43,18 @@
 # 依赖库
 ```
 $ pip install scrapy
+```
 
+# 以下方法暂时用不到
+## 安装依赖库
+```
 $ pip install scrapy-splash
+
+$ pip install selenium
 ```
 
 
-# 安装Docker
+## 安装Docker
 ```
 $ sudo yum remove docker \
                   docker-client \
@@ -79,4 +85,5 @@ $ sudo docker run -d -p 8050:8050 scrapinghub/splash
 
 >https://docs.docker.com/engine/install/centos/
 
+>https://github.com/hahaha108/MyNews/tree/master/MyNews
 

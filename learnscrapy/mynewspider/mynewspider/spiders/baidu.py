@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+"""
 import scrapy
 from scrapy.linkextractors import LinkExtractor
 from scrapy.spiders import CrawlSpider, Rule
@@ -63,3 +64,4 @@ class BaiduSpider(CrawlSpider):
         name = response.xpath("//h1/text()").extract()
         print(name)
         return ""
+"""

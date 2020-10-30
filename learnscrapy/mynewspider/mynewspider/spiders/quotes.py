@@ -1,3 +1,4 @@
+"""
 # -*- coding: utf-8 -*-
 import scrapy
 from scrapy.linkextractors import LinkExtractor
@@ -31,3 +32,4 @@ class QuotesSpider(scrapy.Spider):
         print(response.css("title").extract())
         print(response.data["har"]["log"]["pages"])
         print(response.headers.get('Content-Type'))
+"""

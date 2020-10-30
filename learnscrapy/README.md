@@ -87,3 +87,5 @@ $ sudo docker run -d -p 8050:8050 scrapinghub/splash
 
 >https://github.com/hahaha108/MyNews/tree/master/MyNews
 
+>https://github.com/F-debug/NewsSpider
+

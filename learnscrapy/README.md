@@ -22,10 +22,40 @@
             spiders/          # a directory where you'll later put your spiders
                 __init__.py
     ```
+# 依赖库
+pip install scrapy
+
+
+# Docker
+
+```
+sudo yum remove docker \
+                  docker-client \
+                  docker-client-latest \
+                  docker-common \
+                  docker-latest \
+                  docker-latest-logrotate \
+                  docker-logrotate \
+                  docker-engine
+```
+
+```
+$ sudo yum install -y yum-utils
+
+$ sudo yum-config-manager \
+    --add-repo \
+    https://download.docker.com/linux/centos/docker-ce.repo
+
+$ sudo yum install docker-ce docker-ce-cli containerd.io
+
+$ sudo systemctl start docker
+```
 
 # 参考
 >https://www.osgeo.cn/scrapy/intro/tutorial.html
 
 >https://github.com/Wooden-Robot/scrapy-tutorial
+
+>https://docs.docker.com/engine/install/centos/
 
 

@@ -6,9 +6,17 @@ from scrapy.spiders import CrawlSpider, Rule
 import re, requests, json
 from scrapy.selector import Selector 
 from mynewspider.items import MynewspiderItem
-from scrapy_splash import SplashRequest
-from scrapy_splash import SplashTextResponse, SplashJsonResponse, SplashResponse
-from scrapy.http import HtmlResponse
+
+
+'''
+# 使用selenium渲染js，速度太慢，放弃
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options # 使用无头浏览器
+# 无头浏览器设置
+chrome_options = Options()
+chrome_options.add_argument("headless")
+chrome_options.add_argument("disable-gpu")
+'''
 
 
 count = 0
@@ -23,14 +31,21 @@ class News163Spider(CrawlSpider):
     rules = (
         Rule(LinkExtractor(allow=r'https://news\.163\.com/.*$', deny=r'https://.*.163.com/photo.*$'), callback='parse_item', follow=True),
     )
-
     def parse_item(self, response):
         news = Selector(response)
         news_url = response.url
-
-        
         global count
         if news.xpath('//*[@id="epContentLeft"]'):
+            '''
+            # 使用selenium渲染js，速度太慢，放弃
+            browser = webdriver.Chrome(chrome_options=chrome_options)
+            browser.implicitly_wait(10)
+            browser.get(news_url)
+            heat = browser.find_element_by_xpath('//*[@id="post_comment_area"]/div[2]/div[2]/a').text
+            print("*****************************", heat)
+            browser.close()
+            '''
+
             
             news_item = MynewspiderItem()
 
@@ -71,7 +86,7 @@ class News163Spider(CrawlSpider):
             comment_url = get_comment_url(news, commentinfoXpath)
             get_comment(comment_url, news_item)
             yield news_item
-
+            
         #item['domain_id'] = response.xpath('//input[@id="sid"]/@value').get()
         #item['name'] = response.xpath('//div[@id="name"]').get()
         #item['description'] = response.xpath('//div[@id="description"]').get()
@@ -144,6 +159,7 @@ def get_comment(comment_url, news_item):
     heat = js_comment['newListSize']
     news_item['heat'] = heat
     '''
+    # To Do 评论字典
     comments = []
     comment_id = 0
     try:

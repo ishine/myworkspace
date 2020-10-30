@@ -22,6 +22,11 @@
             spiders/          # a directory where you'll later put your spiders
                 __init__.py
     ```
+
+# 创建一个基于CrawlSpider的爬虫文件
+```
+scrapy genspider -t crawl SpiderName www.xxx.com
+```
 # 依赖库
 pip install scrapy
 

@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import scrapy
 from scrapy.linkextractors import LinkExtractor
 from scrapy.spiders import CrawlSpider, Rule
@@ -5,6 +6,8 @@ from scrapy.spiders import CrawlSpider, Rule
 import re, requests, json
 from scrapy.selector import Selector 
 from mynewspider.items import MynewspiderItem
+from scrapy_splash import SplashRequest
+
 
 count = 0
 class News163Spider(CrawlSpider):

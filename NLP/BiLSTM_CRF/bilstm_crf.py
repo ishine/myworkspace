@@ -27,7 +27,7 @@ def main():
     parser.add_argument('--epoch', type=int, default=10, help='#epoch of training')
     parser.add_argument('--hidden_dim', type=int, default=300, help='#dim of hidden state')
     parser.add_argument('--embedding_dim', type=int, default=300, help='random init char embedding_dim')
-    parser.add_argument('--lr', type=float, default=0.001, help='learning rate')
+    parser.add_argument('--lr', type=float, default=0.01, help='learning rate')
     parser.add_argument('--clip', type=float, default=5.0, help='gradient clipping')
     parser.add_argument('--dropout', type=float, default=0.5, help='dropout keep_prob')
     parser.add_argument('--num_tags', type=int, default = 7, help = 'tag number')
@@ -134,8 +134,6 @@ def main():
                 if step + 1 == 1 or (step + 1) % 300 == 0 or step + 1 == num_batches:
                     logger.info('{} epoch {}, step {}, loss: {:.4}, global_step: {}'.format(start_time, epoch + 1, step + 1,
                                                                             loss_train, step_num))
-                break
-            break
         logger.info('===========test===========')
         
         
@@ -159,9 +157,6 @@ def main():
             label_list.extend(label_list_)
             seq_len_list.extend(seq_len_list_)
         evaluate(logger, label_list, seq_len_list, testData, epoch)
-        
-
-
 
 def get_logger(filename):
     logger = logging.getLogger('logger')

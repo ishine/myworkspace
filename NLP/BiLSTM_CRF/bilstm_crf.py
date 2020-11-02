@@ -134,29 +134,29 @@ def main():
                 if step + 1 == 1 or (step + 1) % 300 == 0 or step + 1 == num_batches:
                     logger.info('{} epoch {}, step {}, loss: {:.4}, global_step: {}'.format(start_time, epoch + 1, step + 1,
                                                                             loss_train, step_num))
-        logger.info('===========test===========')
-        
-        
-        # 模型评估
-        label_list, seq_len_list = [], []
-        for seqs, labels in batch_yield(testData, args.batch_size, char2id, tag2labelDict, shuffle = False):
-            _word_ids, seq_len_list_ = pad_sequences(seqs)
-            _labels_, _ = pad_sequences(labels)
-            feed_dict = {
-                    input_data: _word_ids,
-                    sequence_lengths: seq_len_list_,
-                    targets: _labels_,
-                    dropout_pl: 1.0
-                }
-            _logits, _transition_params = sess.run([logits, transition_params],
-                                                feed_dict = feed_dict)
-            label_list_ = []
-            for logit, seq_len in zip(_logits, seq_len_list_):
-                viterbi_seq, _ = viterbi_decode(logit[:seq_len], _transition_params)
-                label_list_.append(viterbi_seq)
-            label_list.extend(label_list_)
-            seq_len_list.extend(seq_len_list_)
-        evaluate(logger, label_list, seq_len_list, testData, epoch)
+            logger.info('===========test===========')
+            
+            
+            # 模型评估
+            label_list, seq_len_list = [], []
+            for seqs, labels in batch_yield(testData, args.batch_size, char2id, tag2labelDict, shuffle = False):
+                _word_ids, seq_len_list_ = pad_sequences(seqs)
+                _labels_, _ = pad_sequences(labels)
+                feed_dict = {
+                        input_data: _word_ids,
+                        sequence_lengths: seq_len_list_,
+                        targets: _labels_,
+                        dropout_pl: 1.0
+                    }
+                _logits, _transition_params = sess.run([logits, transition_params],
+                                                    feed_dict = feed_dict)
+                label_list_ = []
+                for logit, seq_len in zip(_logits, seq_len_list_):
+                    viterbi_seq, _ = viterbi_decode(logit[:seq_len], _transition_params)
+                    label_list_.append(viterbi_seq)
+                label_list.extend(label_list_)
+                seq_len_list.extend(seq_len_list_)
+            evaluate(logger, label_list, seq_len_list, testData, epoch)
 
 def get_logger(filename):
     logger = logging.getLogger('logger')

@@ -1,8 +1,2 @@
-.ipynb_checkpoints
-NLP/.ipynb_checkpoints
-NLP/ref
-*.ipynb
 NLP/BiLSTM_CRF/result
-NLP/RNN-ATTENTION-MT/data
 NLP/RNN-ATTENTION-MT/result
-NLP/BiLSTM_CRF/data

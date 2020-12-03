@@ -4,7 +4,7 @@
 - 改进之处在于
     1. 原来使用的是BasicRNNCell, 训练过程中会梯度爆炸, 改成LSTMCell
     2. 添加dropout
-    3. 修改模型评估部分代码, 应用https://github.com/mjpost/sacrebleu中的方法
+    3. 修改模型评估部分代码, 应用https://github.com/mjpost/sacrebleu 中的方法
     4. 添加了记录log的代码
 
 # 模型训练
@@ -13,19 +13,25 @@ python nmt.py --mode train --learning_rate 0.001 --epochs 10 --batch_size 64 --e
 ```
 
 # 模型预测
+model_path是在模型训练时保存在model/目录下的模型
 ```
-python nmt.py --mode infer --model_path '2020-12-03 09-34-45' --beam_width 2
+python nmt.py --mode infer --model_path '2020-12-03 10-35-13' --beam_width 2
 ```
+这里逐句计算bleu score然后再求平均值输出
 
 # 模型评估
 ```
 cat infer.en.tok |sacrebleu ref.en.tok
 ```
+这是对所有翻译输出一起计算bleu score值, 和模型预测里的结果略有不同, 如下图所示, 没找到原因所在
+![avatar](result.jpg)
+
 
 # 其他说明
 - 使用的是tensorflow1.15.0版本
 - log.txt里记录了训练日志, 其中loss测试了多种超参数也没有降到很低, 没找出原因
 - sacrebleu测试的评分很低, 很多翻译的都牛头不对马嘴
+- beam search的宽度设置也会对bleuscore有影响, log.txt记录了beam_width从1-3的bleu score结果
 
 # 参数设置
 参数设置方法如以下函数所示:
@@ -42,7 +48,7 @@ def parse_args():
     parser.add_argument('--test_src_path', type = str, default = './data/test.zh.tok')
     parser.add_argument('--test_target_path', type = str, default = './data/test.en.tok')
     # 测试结果输出路径
-    parser.add_argument('--result_path', type = str, default = './result/translate.en.tok')
+    # parser.add_argument('--result_path', type = str, default = './result/translate.en.tok')
     # 日志记录路径
     parser.add_argument('--log_path', type = str, default = 'log.txt')
     # 训练轮数

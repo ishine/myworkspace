@@ -23,7 +23,7 @@ def parse_args():
     parser.add_argument('--test_src_path', type = str, default = './data/test.zh.tok')
     parser.add_argument('--test_target_path', type = str, default = './data/test.en.tok')
     # 测试结果输出路径
-    parser.add_argument('--result_path', type = str, default = './result/translate.en.tok')
+    # parser.add_argument('--result_path', type = str, default = './result/translate.en.tok')
     # 日志记录路径
     parser.add_argument('--log_path', type = str, default = 'log.txt')
     # 训练轮数
@@ -247,7 +247,7 @@ class NMT():
                 saver.save(sess, self.args.model_path, global_step = step_num)
 
     def test(self):
-        self.logger.info('===========test===========')
+        self.logger.info('===========test, beam width: %d===========' %self.args.beam_width)
         all_candidates = []
         config = tf.ConfigProto()
         config.gpu_options.allow_growth = True
@@ -259,7 +259,7 @@ class NMT():
 
             test_batches =  bacth_yield(self.test_loader.data, self.args.batch_size, shuffle = False)
             for i, (src, target_in, target_out) in enumerate(test_batches):
-                sys.stdout.write(' evaluating: #{} batch'.format(i + 1) + '\r')
+                sys.stdout.write('evaluating: #{} batch'.format(i + 1) + '\r')
                 encoder_inputs, encoder_inputs_length, _, _, decoder_length = padding(src, target_in, target_out, pad_mark = 3)
                 # 构造馈送的数据
                 feed_dict = {
@@ -296,15 +296,13 @@ class NMT():
                 f.writelines(target_lines[:len(candicates)])
             # 逐句测试
             bleuscore = []
-            for sys, ref in zip(all_candidates, self.test_loader.target_lines):
-                sys = ' '.join(sys)
+            for syst, ref in zip(all_candidates, self.test_loader.target_lines):
+                syst = ' '.join(syst)
                 ref = ' '.join(ref)
-                bleu = sacrebleu.corpus_bleu(sys, ref)
+                bleu = sacrebleu.corpus_bleu(syst, ref)
                 bleuscore.append(bleu.score)
             # 求bleuscore均值
-            print(np.mean(bleuscore))
-            print(len(bleuscore))
-            self.logger.info('bleuscore: %d' %np.mean(bleuscore))
+            self.logger.info('\nbleuscore: %f' %np.mean(bleuscore))
         
 
 

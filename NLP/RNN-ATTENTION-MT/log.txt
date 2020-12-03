@@ -17,3 +17,171 @@
 2020-12-03 10:52:51,247:INFO: 2020-12-03 10:35:20 epoch 1, step 2400, loss: 93.55, global_step: 2400
 2020-12-03 10:55:04,401:INFO: 2020-12-03 10:35:20 epoch 1, step 2700, loss: 80.61, global_step: 2700
 2020-12-03 10:57:16,654:INFO: 2020-12-03 10:35:20 epoch 1, step 3000, loss: 88.37, global_step: 3000
+2020-12-03 10:59:27,753:INFO: 2020-12-03 10:35:20 epoch 1, step 3300, loss: 95.29, global_step: 3300
+2020-12-03 11:01:37,455:INFO: 2020-12-03 10:35:20 epoch 1, step 3600, loss: 102.5, global_step: 3600
+2020-12-03 11:03:14,023:INFO: 2020-12-03 10:35:20 epoch 1, step 3822, loss: 71.48, global_step: 3822
+2020-12-03 11:03:16,010:INFO: 2020-12-03 11:03:15 epoch 2, step 1, loss: 97.75, global_step: 3823
+2020-12-03 11:05:27,020:INFO: 2020-12-03 11:03:15 epoch 2, step 300, loss: 83.5, global_step: 4122
+2020-12-03 11:07:40,087:INFO: 2020-12-03 11:03:15 epoch 2, step 600, loss: 89.48, global_step: 4422
+2020-12-03 11:09:51,163:INFO: 2020-12-03 11:03:15 epoch 2, step 900, loss: 70.77, global_step: 4722
+2020-12-03 11:12:02,085:INFO: 2020-12-03 11:03:15 epoch 2, step 1200, loss: 77.0, global_step: 5022
+2020-12-03 11:14:13,324:INFO: 2020-12-03 11:03:15 epoch 2, step 1500, loss: 75.6, global_step: 5322
+2020-12-03 11:16:23,869:INFO: 2020-12-03 11:03:15 epoch 2, step 1800, loss: 87.64, global_step: 5622
+2020-12-03 11:18:33,758:INFO: 2020-12-03 11:03:15 epoch 2, step 2100, loss: 90.43, global_step: 5922
+2020-12-03 11:20:42,679:INFO: 2020-12-03 11:03:15 epoch 2, step 2400, loss: 68.21, global_step: 6222
+2020-12-03 11:22:52,921:INFO: 2020-12-03 11:03:15 epoch 2, step 2700, loss: 72.1, global_step: 6522
+2020-12-03 11:25:02,513:INFO: 2020-12-03 11:03:15 epoch 2, step 3000, loss: 77.62, global_step: 6822
+2020-12-03 11:27:15,666:INFO: 2020-12-03 11:03:15 epoch 2, step 3300, loss: 72.22, global_step: 7122
+2020-12-03 11:29:30,392:INFO: 2020-12-03 11:03:15 epoch 2, step 3600, loss: 64.17, global_step: 7422
+2020-12-03 11:31:03,213:INFO: 2020-12-03 11:03:15 epoch 2, step 3822, loss: 69.07, global_step: 7644
+2020-12-03 11:31:04,939:INFO: 2020-12-03 11:31:04 epoch 3, step 1, loss: 84.2, global_step: 7645
+2020-12-03 11:33:16,927:INFO: 2020-12-03 11:31:04 epoch 3, step 300, loss: 58.17, global_step: 7944
+2020-12-03 11:35:29,611:INFO: 2020-12-03 11:31:04 epoch 3, step 600, loss: 63.2, global_step: 8244
+2020-12-03 11:37:39,623:INFO: 2020-12-03 11:31:04 epoch 3, step 900, loss: 77.06, global_step: 8544
+2020-12-03 11:39:50,587:INFO: 2020-12-03 11:31:04 epoch 3, step 1200, loss: 64.01, global_step: 8844
+2020-12-03 11:41:59,534:INFO: 2020-12-03 11:31:04 epoch 3, step 1500, loss: 70.96, global_step: 9144
+2020-12-03 11:44:08,224:INFO: 2020-12-03 11:31:04 epoch 3, step 1800, loss: 70.39, global_step: 9444
+2020-12-03 11:46:15,505:INFO: 2020-12-03 11:31:04 epoch 3, step 2100, loss: 74.43, global_step: 9744
+2020-12-03 11:48:27,711:INFO: 2020-12-03 11:31:04 epoch 3, step 2400, loss: 88.19, global_step: 10044
+2020-12-03 11:50:39,042:INFO: 2020-12-03 11:31:04 epoch 3, step 2700, loss: 78.8, global_step: 10344
+2020-12-03 11:52:50,065:INFO: 2020-12-03 11:31:04 epoch 3, step 3000, loss: 79.36, global_step: 10644
+2020-12-03 11:54:59,931:INFO: 2020-12-03 11:31:04 epoch 3, step 3300, loss: 65.96, global_step: 10944
+2020-12-03 11:57:10,655:INFO: 2020-12-03 11:31:04 epoch 3, step 3600, loss: 64.18, global_step: 11244
+2020-12-03 11:58:48,088:INFO: 2020-12-03 11:31:04 epoch 3, step 3822, loss: 75.44, global_step: 11466
+2020-12-03 11:58:49,713:INFO: 2020-12-03 11:58:48 epoch 4, step 1, loss: 83.23, global_step: 11467
+2020-12-03 12:00:59,889:INFO: 2020-12-03 11:58:48 epoch 4, step 300, loss: 64.01, global_step: 11766
+2020-12-03 12:03:11,519:INFO: 2020-12-03 11:58:48 epoch 4, step 600, loss: 59.54, global_step: 12066
+2020-12-03 12:05:22,251:INFO: 2020-12-03 11:58:48 epoch 4, step 900, loss: 65.56, global_step: 12366
+2020-12-03 12:07:35,991:INFO: 2020-12-03 11:58:48 epoch 4, step 1200, loss: 61.52, global_step: 12666
+2020-12-03 12:09:48,663:INFO: 2020-12-03 11:58:48 epoch 4, step 1500, loss: 65.05, global_step: 12966
+2020-12-03 12:12:01,323:INFO: 2020-12-03 11:58:48 epoch 4, step 1800, loss: 57.98, global_step: 13266
+2020-12-03 12:14:13,610:INFO: 2020-12-03 11:58:48 epoch 4, step 2100, loss: 67.5, global_step: 13566
+2020-12-03 12:16:25,199:INFO: 2020-12-03 11:58:48 epoch 4, step 2400, loss: 56.3, global_step: 13866
+2020-12-03 12:18:37,911:INFO: 2020-12-03 11:58:48 epoch 4, step 2700, loss: 65.28, global_step: 14166
+2020-12-03 12:20:48,699:INFO: 2020-12-03 11:58:48 epoch 4, step 3000, loss: 72.16, global_step: 14466
+2020-12-03 12:22:59,717:INFO: 2020-12-03 11:58:48 epoch 4, step 3300, loss: 73.78, global_step: 14766
+2020-12-03 12:25:11,499:INFO: 2020-12-03 11:58:48 epoch 4, step 3600, loss: 67.46, global_step: 15066
+2020-12-03 12:26:46,470:INFO: 2020-12-03 11:58:48 epoch 4, step 3822, loss: 76.52, global_step: 15288
+2020-12-03 12:26:48,819:INFO: 2020-12-03 12:26:47 epoch 5, step 1, loss: 63.17, global_step: 15289
+2020-12-03 12:29:00,060:INFO: 2020-12-03 12:26:47 epoch 5, step 300, loss: 52.15, global_step: 15588
+2020-12-03 12:31:08,151:INFO: 2020-12-03 12:26:47 epoch 5, step 600, loss: 73.36, global_step: 15888
+2020-12-03 12:33:18,278:INFO: 2020-12-03 12:26:47 epoch 5, step 900, loss: 69.95, global_step: 16188
+2020-12-03 12:35:28,882:INFO: 2020-12-03 12:26:47 epoch 5, step 1200, loss: 62.47, global_step: 16488
+2020-12-03 12:37:41,895:INFO: 2020-12-03 12:26:47 epoch 5, step 1500, loss: 45.98, global_step: 16788
+2020-12-03 12:39:52,583:INFO: 2020-12-03 12:26:47 epoch 5, step 1800, loss: 73.53, global_step: 17088
+2020-12-03 12:42:01,689:INFO: 2020-12-03 12:26:47 epoch 5, step 2100, loss: 54.43, global_step: 17388
+2020-12-03 12:44:12,781:INFO: 2020-12-03 12:26:47 epoch 5, step 2400, loss: 59.66, global_step: 17688
+2020-12-03 12:46:24,255:INFO: 2020-12-03 12:26:47 epoch 5, step 2700, loss: 53.74, global_step: 17988
+2020-12-03 12:48:35,013:INFO: 2020-12-03 12:26:47 epoch 5, step 3000, loss: 64.53, global_step: 18288
+2020-12-03 12:50:46,939:INFO: 2020-12-03 12:26:47 epoch 5, step 3300, loss: 75.54, global_step: 18588
+2020-12-03 12:52:58,969:INFO: 2020-12-03 12:26:47 epoch 5, step 3600, loss: 61.66, global_step: 18888
+2020-12-03 12:54:36,213:INFO: 2020-12-03 12:26:47 epoch 5, step 3822, loss: 60.22, global_step: 19110
+2020-12-03 12:54:37,808:INFO: 2020-12-03 12:54:37 epoch 6, step 1, loss: 62.16, global_step: 19111
+2020-12-03 12:56:49,583:INFO: 2020-12-03 12:54:37 epoch 6, step 300, loss: 63.24, global_step: 19410
+2020-12-03 12:59:00,930:INFO: 2020-12-03 12:54:37 epoch 6, step 600, loss: 62.33, global_step: 19710
+2020-12-03 13:01:11,427:INFO: 2020-12-03 12:54:37 epoch 6, step 900, loss: 58.29, global_step: 20010
+2020-12-03 13:03:24,484:INFO: 2020-12-03 12:54:37 epoch 6, step 1200, loss: 68.51, global_step: 20310
+2020-12-03 13:05:33,358:INFO: 2020-12-03 12:54:37 epoch 6, step 1500, loss: 64.53, global_step: 20610
+2020-12-03 13:07:45,499:INFO: 2020-12-03 12:54:37 epoch 6, step 1800, loss: 70.94, global_step: 20910
+2020-12-03 13:09:56,266:INFO: 2020-12-03 12:54:37 epoch 6, step 2100, loss: 59.14, global_step: 21210
+2020-12-03 13:12:04,616:INFO: 2020-12-03 12:54:37 epoch 6, step 2400, loss: 54.61, global_step: 21510
+2020-12-03 13:14:17,011:INFO: 2020-12-03 12:54:37 epoch 6, step 2700, loss: 49.0, global_step: 21810
+2020-12-03 13:16:28,726:INFO: 2020-12-03 12:54:37 epoch 6, step 3000, loss: 62.13, global_step: 22110
+2020-12-03 13:18:39,243:INFO: 2020-12-03 12:54:37 epoch 6, step 3300, loss: 68.79, global_step: 22410
+2020-12-03 13:20:55,000:INFO: 2020-12-03 12:54:37 epoch 6, step 3600, loss: 58.07, global_step: 22710
+2020-12-03 13:22:31,375:INFO: 2020-12-03 12:54:37 epoch 6, step 3822, loss: 60.66, global_step: 22932
+2020-12-03 13:22:32,251:WARNING: From /home/gzc/.conda/envs/adca/lib/python3.7/site-packages/tensorflow_core/python/training/saver.py:963: remove_checkpoint (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to delete files with this prefix.
+2020-12-03 13:22:33,659:INFO: 2020-12-03 13:22:32 epoch 7, step 1, loss: 42.74, global_step: 22933
+2020-12-03 13:24:42,827:INFO: 2020-12-03 13:22:32 epoch 7, step 300, loss: 61.36, global_step: 23232
+2020-12-03 13:26:49,261:INFO: 2020-12-03 13:22:32 epoch 7, step 600, loss: 56.78, global_step: 23532
+2020-12-03 13:28:59,143:INFO: 2020-12-03 13:22:32 epoch 7, step 900, loss: 60.17, global_step: 23832
+2020-12-03 13:31:07,549:INFO: 2020-12-03 13:22:32 epoch 7, step 1200, loss: 60.5, global_step: 24132
+2020-12-03 13:33:13,734:INFO: 2020-12-03 13:22:32 epoch 7, step 1500, loss: 51.63, global_step: 24432
+2020-12-03 13:35:24,028:INFO: 2020-12-03 13:22:32 epoch 7, step 1800, loss: 73.65, global_step: 24732
+2020-12-03 13:37:35,355:INFO: 2020-12-03 13:22:32 epoch 7, step 2100, loss: 59.01, global_step: 25032
+2020-12-03 13:39:46,746:INFO: 2020-12-03 13:22:32 epoch 7, step 2400, loss: 57.76, global_step: 25332
+2020-12-03 13:41:58,537:INFO: 2020-12-03 13:22:32 epoch 7, step 2700, loss: 62.35, global_step: 25632
+2020-12-03 13:44:08,339:INFO: 2020-12-03 13:22:32 epoch 7, step 3000, loss: 59.83, global_step: 25932
+2020-12-03 13:46:21,564:INFO: 2020-12-03 13:22:32 epoch 7, step 3300, loss: 46.66, global_step: 26232
+2020-12-03 13:48:35,147:INFO: 2020-12-03 13:22:32 epoch 7, step 3600, loss: 50.66, global_step: 26532
+2020-12-03 13:50:12,422:INFO: 2020-12-03 13:22:32 epoch 7, step 3822, loss: 65.71, global_step: 26754
+2020-12-03 13:50:14,693:INFO: 2020-12-03 13:50:13 epoch 8, step 1, loss: 50.76, global_step: 26755
+2020-12-03 13:52:24,608:INFO: 2020-12-03 13:50:13 epoch 8, step 300, loss: 60.31, global_step: 27054
+2020-12-03 13:54:37,343:INFO: 2020-12-03 13:50:13 epoch 8, step 600, loss: 53.55, global_step: 27354
+2020-12-03 13:56:51,223:INFO: 2020-12-03 13:50:13 epoch 8, step 900, loss: 55.99, global_step: 27654
+2020-12-03 13:59:00,908:INFO: 2020-12-03 13:50:13 epoch 8, step 1200, loss: 51.15, global_step: 27954
+2020-12-03 14:01:09,779:INFO: 2020-12-03 13:50:13 epoch 8, step 1500, loss: 49.24, global_step: 28254
+2020-12-03 14:03:19,431:INFO: 2020-12-03 13:50:13 epoch 8, step 1800, loss: 69.37, global_step: 28554
+2020-12-03 14:05:25,319:INFO: 2020-12-03 13:50:13 epoch 8, step 2100, loss: 52.2, global_step: 28854
+2020-12-03 14:07:36,071:INFO: 2020-12-03 13:50:13 epoch 8, step 2400, loss: 57.88, global_step: 29154
+2020-12-03 14:09:51,409:INFO: 2020-12-03 13:50:13 epoch 8, step 2700, loss: 73.62, global_step: 29454
+2020-12-03 14:12:03,615:INFO: 2020-12-03 13:50:13 epoch 8, step 3000, loss: 62.85, global_step: 29754
+2020-12-03 14:14:12,894:INFO: 2020-12-03 13:50:13 epoch 8, step 3300, loss: 66.14, global_step: 30054
+2020-12-03 14:16:25,960:INFO: 2020-12-03 13:50:13 epoch 8, step 3600, loss: 59.24, global_step: 30354
+2020-12-03 14:18:02,532:INFO: 2020-12-03 13:50:13 epoch 8, step 3822, loss: 54.02, global_step: 30576
+2020-12-03 14:18:04,391:INFO: 2020-12-03 14:18:03 epoch 9, step 1, loss: 52.1, global_step: 30577
+2020-12-03 14:20:16,007:INFO: 2020-12-03 14:18:03 epoch 9, step 300, loss: 53.79, global_step: 30876
+2020-12-03 14:22:27,391:INFO: 2020-12-03 14:18:03 epoch 9, step 600, loss: 50.71, global_step: 31176
+2020-12-03 14:24:38,027:INFO: 2020-12-03 14:18:03 epoch 9, step 900, loss: 53.49, global_step: 31476
+2020-12-03 14:26:44,396:INFO: 2020-12-03 14:18:03 epoch 9, step 1200, loss: 54.29, global_step: 31776
+2020-12-03 14:28:54,655:INFO: 2020-12-03 14:18:03 epoch 9, step 1500, loss: 53.07, global_step: 32076
+2020-12-03 14:31:05,518:INFO: 2020-12-03 14:18:03 epoch 9, step 1800, loss: 57.29, global_step: 32376
+2020-12-03 14:33:17,915:INFO: 2020-12-03 14:18:03 epoch 9, step 2100, loss: 44.91, global_step: 32676
+2020-12-03 14:35:31,821:INFO: 2020-12-03 14:18:03 epoch 9, step 2400, loss: 58.4, global_step: 32976
+2020-12-03 14:37:44,067:INFO: 2020-12-03 14:18:03 epoch 9, step 2700, loss: 53.43, global_step: 33276
+2020-12-03 14:39:57,804:INFO: 2020-12-03 14:18:03 epoch 9, step 3000, loss: 55.73, global_step: 33576
+2020-12-03 14:42:09,625:INFO: 2020-12-03 14:18:03 epoch 9, step 3300, loss: 52.19, global_step: 33876
+2020-12-03 14:44:19,021:INFO: 2020-12-03 14:18:03 epoch 9, step 3600, loss: 54.46, global_step: 34176
+2020-12-03 14:45:52,443:INFO: 2020-12-03 14:18:03 epoch 9, step 3822, loss: 51.58, global_step: 34398
+2020-12-03 14:45:54,781:INFO: 2020-12-03 14:45:53 epoch 10, step 1, loss: 44.1, global_step: 34399
+2020-12-03 14:48:04,587:INFO: 2020-12-03 14:45:53 epoch 10, step 300, loss: 45.92, global_step: 34698
+2020-12-03 14:50:15,015:INFO: 2020-12-03 14:45:53 epoch 10, step 600, loss: 71.63, global_step: 34998
+2020-12-03 14:52:27,353:INFO: 2020-12-03 14:45:53 epoch 10, step 900, loss: 51.06, global_step: 35298
+2020-12-03 14:54:37,627:INFO: 2020-12-03 14:45:53 epoch 10, step 1200, loss: 48.89, global_step: 35598
+2020-12-03 14:56:49,738:INFO: 2020-12-03 14:45:53 epoch 10, step 1500, loss: 48.22, global_step: 35898
+2020-12-03 14:59:05,213:INFO: 2020-12-03 14:45:53 epoch 10, step 1800, loss: 53.26, global_step: 36198
+2020-12-03 15:01:12,257:INFO: 2020-12-03 14:45:53 epoch 10, step 2100, loss: 54.81, global_step: 36498
+2020-12-03 15:03:24,267:INFO: 2020-12-03 14:45:53 epoch 10, step 2400, loss: 57.66, global_step: 36798
+2020-12-03 15:05:36,646:INFO: 2020-12-03 14:45:53 epoch 10, step 2700, loss: 56.69, global_step: 37098
+2020-12-03 15:07:46,955:INFO: 2020-12-03 14:45:53 epoch 10, step 3000, loss: 55.42, global_step: 37398
+2020-12-03 15:09:59,839:INFO: 2020-12-03 14:45:53 epoch 10, step 3300, loss: 50.22, global_step: 37698
+2020-12-03 15:12:12,481:INFO: 2020-12-03 14:45:53 epoch 10, step 3600, loss: 52.12, global_step: 37998
+2020-12-03 15:13:47,846:INFO: 2020-12-03 14:45:53 epoch 10, step 3822, loss: 62.7, global_step: 38220
+2020-12-03 15:41:51,540:INFO: ===========test, beam width: 1===========
+2020-12-03 15:41:51,541:WARNING: From nmt.py:252: The name tf.ConfigProto is deprecated. Please use tf.compat.v1.ConfigProto instead.
+
+2020-12-03 15:41:51,541:WARNING: From nmt.py:254: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
+
+2020-12-03 15:41:54,227:WARNING: From nmt.py:256: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+2020-12-03 15:41:54,228:WARNING: From nmt.py:256: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+2020-12-03 15:41:54,252:INFO: Restoring parameters from ./model/2020-12-03 10-35-13/-38220
+2020-12-03 15:43:03,494:INFO: 
+bleuscore: 5.029865
+2020-12-03 15:44:17,366:INFO: ===========test, beam width: 2===========
+2020-12-03 15:44:17,367:WARNING: From nmt.py:252: The name tf.ConfigProto is deprecated. Please use tf.compat.v1.ConfigProto instead.
+
+2020-12-03 15:44:17,367:WARNING: From nmt.py:254: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
+
+2020-12-03 15:44:20,105:WARNING: From nmt.py:256: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+2020-12-03 15:44:20,106:WARNING: From nmt.py:256: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+2020-12-03 15:44:20,141:INFO: Restoring parameters from ./model/2020-12-03 10-35-13/-38220
+2020-12-03 15:45:41,217:INFO: 
+bleuscore: 5.166139
+2020-12-03 15:47:50,442:INFO: ===========test, beam width: 3===========
+2020-12-03 15:47:50,443:WARNING: From nmt.py:252: The name tf.ConfigProto is deprecated. Please use tf.compat.v1.ConfigProto instead.
+
+2020-12-03 15:47:50,443:WARNING: From nmt.py:254: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
+
+2020-12-03 15:47:52,846:WARNING: From nmt.py:256: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+2020-12-03 15:47:52,846:WARNING: From nmt.py:256: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+2020-12-03 15:47:52,885:INFO: Restoring parameters from ./model/2020-12-03 10-35-13/-38220
+2020-12-03 15:49:18,236:INFO: 
+bleuscore: 5.143923

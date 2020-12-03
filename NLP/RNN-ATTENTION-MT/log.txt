@@ -1,0 +1,19 @@
+2020-12-03 10:35:15,520:WARNING: From nmt.py:218: The name tf.ConfigProto is deprecated. Please use tf.compat.v1.ConfigProto instead.
+
+2020-12-03 10:35:15,521:WARNING: From nmt.py:220: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+2020-12-03 10:35:15,521:WARNING: From nmt.py:220: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+2020-12-03 10:35:15,592:WARNING: From nmt.py:221: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
+
+2020-12-03 10:35:24,220:INFO: 2020-12-03 10:35:20 epoch 1, step 1, loss: 206.5, global_step: 1
+2020-12-03 10:37:33,787:INFO: 2020-12-03 10:35:20 epoch 1, step 300, loss: 118.7, global_step: 300
+2020-12-03 10:39:43,099:INFO: 2020-12-03 10:35:20 epoch 1, step 600, loss: 104.9, global_step: 600
+2020-12-03 10:41:55,395:INFO: 2020-12-03 10:35:20 epoch 1, step 900, loss: 88.51, global_step: 900
+2020-12-03 10:44:04,269:INFO: 2020-12-03 10:35:20 epoch 1, step 1200, loss: 90.19, global_step: 1200
+2020-12-03 10:46:12,956:INFO: 2020-12-03 10:35:20 epoch 1, step 1500, loss: 102.1, global_step: 1500
+2020-12-03 10:48:26,304:INFO: 2020-12-03 10:35:20 epoch 1, step 1800, loss: 113.4, global_step: 1800
+2020-12-03 10:50:38,499:INFO: 2020-12-03 10:35:20 epoch 1, step 2100, loss: 82.86, global_step: 2100
+2020-12-03 10:52:51,247:INFO: 2020-12-03 10:35:20 epoch 1, step 2400, loss: 93.55, global_step: 2400
+2020-12-03 10:55:04,401:INFO: 2020-12-03 10:35:20 epoch 1, step 2700, loss: 80.61, global_step: 2700
+2020-12-03 10:57:16,654:INFO: 2020-12-03 10:35:20 epoch 1, step 3000, loss: 88.37, global_step: 3000

@@ -1,0 +1,7 @@
+[I 19:13:10.937 LabApp] The port 8888 is already in use, trying another port.
+[I 19:13:10.943 LabApp] JupyterLab extension loaded from /usr/share/anaconda3/lib/python3.8/site-packages/jupyterlab
+[I 19:13:10.943 LabApp] JupyterLab application directory is /usr/share/anaconda3/share/jupyter/lab
+[I 19:13:10.945 LabApp] Serving notebooks from local directory: /home/gzc/myworkspace
+[I 19:13:10.945 LabApp] The Jupyter Notebook is running at:
+[I 19:13:10.945 LabApp] http://iielct-2288H-V5:8889/
+[I 19:13:10.946 LabApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).

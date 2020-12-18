@@ -3,3 +3,12 @@ NLP/RNN-ATTENTION-MT/result
 .ipynb_checkpoints
 NLP/RE/data
 NLP/RE/embedding
+NLP/AttLSTM/embedding
+NLP/AttLSTM/model
+NLP/AttLSTM/output
+NLP/AttLSTM/__pycache__/config.cpython-37.pyc
+NLP/AttLSTM/__pycache__/config.cpython-38.pyc
+NLP/AttLSTM/__pycache__/model.cpython-37.pyc
+NLP/AttLSTM/__pycache__/utils.cpython-37.pyc
+NLP/AttLSTM/data/test.json
+NLP/AttLSTM/data/train.json

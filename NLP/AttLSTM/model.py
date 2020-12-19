@@ -26,6 +26,8 @@ class AttLSTM():
         self.model_path = model_path
         # id到关系的映射
         self.id2rel = id2rel
+        # 日志记录
+        self.logger = get_logger('log.txt')
 
         self.add_placeholder()
         self.add_embedding()
@@ -115,11 +117,12 @@ class AttLSTM():
             # 计算loss
             _, loss_train, accuracy = sess.run([self.train_op, self.loss, self.accuracy], feed_dict = feed_dict)
             if step + 1 == 1 or (step + 1) % 300 == 0 or step + 1 == num_batches:
-                print('{} epoch {}, step {}, loss: {:.4}, accuracy: {:.4}, global_step: {}'.format(start_time, epoch + 1, 
+                self.logger.info('{} epoch {}, step {}, loss: {:.4}, accuracy: {:.4}, global_step: {}'.format(start_time, epoch + 1, 
                                                                                    step + 1,loss_train, accuracy, step_num))
             if step + 1 == num_batches:
                 saver.save(sess, self.model_path, global_step = step_num)
     def test(self, test_data):
+        self.logger.info('===========test===========')
         all_predict = []
         reference = []
         config = tf.ConfigProto()

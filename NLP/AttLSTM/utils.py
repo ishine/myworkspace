@@ -5,6 +5,7 @@ import tensorflow as tf
 import sys
 import collections
 import random
+import logging
 
 
 
@@ -135,6 +136,16 @@ def pad_sequences(sequences, pad_mark = 0):
         seq_list.append(seq_)
         seq_len_list.append(min(len(seq), max_len))
     return seq_list, seq_len_list
+
+def get_logger(logname):
+    logger = logging.getLogger('logger')
+    logger.setLevel(logging.DEBUG)
+    logging.basicConfig(format='%(message)s', level=logging.DEBUG)
+    handler = logging.FileHandler(logname)
+    handler.setLevel(logging.DEBUG)
+    handler.setFormatter(logging.Formatter('%(asctime)s:%(levelname)s: %(message)s'))
+    logging.getLogger().addHandler(handler)
+    return logger
 
 
 if __name__ == '__main__':

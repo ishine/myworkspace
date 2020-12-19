@@ -36,6 +36,9 @@ class Config(object):
         parser.add_argument('--output_dir', type=str,
                             default='./output',
                             help='dir to save output')
+        parser.add_argument('--model_path', type=str,
+                            default='2020-12-19 00-31-23',
+                            help='dir to save model')
         # word embedding
         parser.add_argument('--embedding_path', type=str,
                             default='./embedding/glove.6B.300d.txt',
@@ -80,7 +83,7 @@ class Config(object):
 
     def print_config(self):
         for key in self.__dict__:
-            print(key, end=' = ')
+            print(key + ' = ')
             print(self.__dict__[key])
 
 

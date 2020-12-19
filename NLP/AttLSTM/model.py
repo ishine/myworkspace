@@ -191,8 +191,7 @@ if __name__ == '__main__':
     # mode = 1时是训练模式
     # mode = 1
     # mode = 0时是测试模式
-    mode = 0
-    if mode:
+    if config.mode:
         '''训练模式'''
         print ("\n训练模式...")
         timestamp = str(time.strftime('%Y-%m-%d %H-%M-%S', time.localtime(time.time())))
@@ -201,11 +200,11 @@ if __name__ == '__main__':
             os.makedirs(model_path)
     else:
         '''测试模式'''
-        timestamp = '2020-12-19 00-31-23'#手动修改被保存的模型路径
+        timestamp = config.model_path
         model_path = os.path.join('.', "model", timestamp + "/")
         print ("\n加载的模型是：", timestamp, '\n')
     
-    if mode:
+    if config.mode:
         # 训练模型
         model = AttLSTM(word_vec, class_num, config, model_path, id2rel)
         model.train(train_data)

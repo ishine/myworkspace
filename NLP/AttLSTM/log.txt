@@ -1,0 +1,113 @@
+2020-12-19 09:58:31,340:WARNING: From model.py:40: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2020-12-19 09:58:31,343:WARNING: From model.py:48: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+2020-12-19 09:58:31,538:WARNING: From model.py:61: LSTMCell.__init__ (from tensorflow.python.ops.rnn_cell_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+This class is equivalent as tf.keras.layers.LSTMCell, and will be replaced by that in Tensorflow 2.0.
+2020-12-19 09:58:31,539:WARNING: From model.py:69: bidirectional_dynamic_rnn (from tensorflow.python.ops.rnn) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `keras.layers.Bidirectional(keras.layers.RNN(cell))`, which is equivalent to this API
+2020-12-19 09:58:31,539:WARNING: From /home/gzc/.conda/envs/adca/lib/python3.7/site-packages/tensorflow_core/python/ops/rnn.py:464: dynamic_rnn (from tensorflow.python.ops.rnn) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `keras.layers.RNN(cell)`, which is equivalent to this API
+2020-12-19 09:58:31,601:WARNING: From /home/gzc/.conda/envs/adca/lib/python3.7/site-packages/tensorflow_core/python/ops/rnn_cell_impl.py:958: Layer.add_variable (from tensorflow.python.keras.engine.base_layer) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `layer.add_weight` method instead.
+2020-12-19 09:58:31,608:WARNING: From /home/gzc/.conda/envs/adca/lib/python3.7/site-packages/tensorflow_core/python/ops/rnn_cell_impl.py:962: calling Zeros.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+2020-12-19 09:58:31,624:WARNING: From /home/gzc/.conda/envs/adca/lib/python3.7/site-packages/tensorflow_core/python/ops/rnn.py:244: where (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2020-12-19 09:58:31,741:WARNING: From model.py:164: The name tf.get_variable is deprecated. Please use tf.compat.v1.get_variable instead.
+
+2020-12-19 09:58:31,763:WARNING: From model.py:76: dense (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.Dense instead.
+2020-12-19 09:58:31,763:WARNING: From /home/gzc/.conda/envs/adca/lib/python3.7/site-packages/tensorflow_core/python/layers/core.py:187: Layer.apply (from tensorflow.python.keras.engine.base_layer) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `layer.__call__` method instead.
+2020-12-19 09:58:31,778:WARNING: From model.py:80: The name tf.trainable_variables is deprecated. Please use tf.compat.v1.trainable_variables instead.
+
+2020-12-19 09:58:31,786:WARNING: From model.py:87: The name tf.train.AdamOptimizer is deprecated. Please use tf.compat.v1.train.AdamOptimizer instead.
+
+2020-12-19 09:58:32,355:WARNING: From model.py:92: The name tf.global_variables_initializer is deprecated. Please use tf.compat.v1.global_variables_initializer instead.
+
+2020-12-19 09:58:32,355:WARNING: From model.py:96: The name tf.ConfigProto is deprecated. Please use tf.compat.v1.ConfigProto instead.
+
+2020-12-19 09:58:32,356:WARNING: From model.py:98: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+2020-12-19 09:58:32,356:WARNING: From model.py:98: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+2020-12-19 09:58:32,379:WARNING: From model.py:99: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
+
+2020-12-19 09:58:36,420:INFO: 2020-12-19 09:58:35 epoch 1, step 1, loss: 2.953, accuracy: 0.07031, global_step: 1
+2020-12-19 09:58:42,176:INFO: 2020-12-19 09:58:35 epoch 1, step 63, loss: 2.77, accuracy: 0.125, global_step: 63
+2020-12-19 09:58:42,765:INFO: 2020-12-19 09:58:42 epoch 2, step 1, loss: 2.78, accuracy: 0.1172, global_step: 64
+2020-12-19 09:58:48,543:INFO: 2020-12-19 09:58:42 epoch 2, step 63, loss: 2.803, accuracy: 0.125, global_step: 126
+2020-12-19 09:58:48,934:INFO: 2020-12-19 09:58:48 epoch 3, step 1, loss: 2.685, accuracy: 0.1719, global_step: 127
+2020-12-19 09:58:54,774:INFO: 2020-12-19 09:58:48 epoch 3, step 63, loss: 2.067, accuracy: 0.3594, global_step: 189
+2020-12-19 09:58:55,165:INFO: 2020-12-19 09:58:55 epoch 4, step 1, loss: 1.527, accuracy: 0.5156, global_step: 190
+2020-12-19 09:59:00,979:INFO: 2020-12-19 09:58:55 epoch 4, step 63, loss: 0.7395, accuracy: 0.75, global_step: 252
+2020-12-19 09:59:01,427:INFO: 2020-12-19 09:59:01 epoch 5, step 1, loss: 0.2629, accuracy: 0.9453, global_step: 253
+2020-12-19 09:59:07,199:INFO: 2020-12-19 09:59:01 epoch 5, step 63, loss: 0.0436, accuracy: 1.0, global_step: 315
+2020-12-19 09:59:07,586:INFO: 2020-12-19 09:59:07 epoch 6, step 1, loss: 0.02235, accuracy: 0.9922, global_step: 316
+2020-12-19 09:59:13,405:INFO: 2020-12-19 09:59:07 epoch 6, step 63, loss: 0.01295, accuracy: 1.0, global_step: 378
+2020-12-19 09:59:13,534:WARNING: From /home/gzc/.conda/envs/adca/lib/python3.7/site-packages/tensorflow_core/python/training/saver.py:963: remove_checkpoint (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to delete files with this prefix.
+2020-12-19 09:59:13,847:INFO: 2020-12-19 09:59:13 epoch 7, step 1, loss: 0.01023, accuracy: 0.9922, global_step: 379
+2020-12-19 09:59:19,736:INFO: 2020-12-19 09:59:13 epoch 7, step 63, loss: 0.003291, accuracy: 1.0, global_step: 441
+2020-12-19 09:59:20,174:INFO: 2020-12-19 09:59:20 epoch 8, step 1, loss: 0.000973, accuracy: 1.0, global_step: 442
+2020-12-19 09:59:25,900:INFO: 2020-12-19 09:59:20 epoch 8, step 63, loss: 0.0005911, accuracy: 1.0, global_step: 504
+2020-12-19 09:59:26,328:INFO: 2020-12-19 09:59:26 epoch 9, step 1, loss: 0.0006145, accuracy: 1.0, global_step: 505
+2020-12-19 09:59:32,161:INFO: 2020-12-19 09:59:26 epoch 9, step 63, loss: 0.0004133, accuracy: 1.0, global_step: 567
+2020-12-19 09:59:32,577:INFO: 2020-12-19 09:59:32 epoch 10, step 1, loss: 0.0003183, accuracy: 1.0, global_step: 568
+2020-12-19 09:59:38,403:INFO: 2020-12-19 09:59:32 epoch 10, step 63, loss: 0.0003907, accuracy: 1.0, global_step: 630
+2020-12-19 10:00:30,784:WARNING: From model.py:40: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2020-12-19 10:00:30,787:WARNING: From model.py:48: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+2020-12-19 10:00:30,989:WARNING: From model.py:61: LSTMCell.__init__ (from tensorflow.python.ops.rnn_cell_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+This class is equivalent as tf.keras.layers.LSTMCell, and will be replaced by that in Tensorflow 2.0.
+2020-12-19 10:00:30,990:WARNING: From model.py:69: bidirectional_dynamic_rnn (from tensorflow.python.ops.rnn) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `keras.layers.Bidirectional(keras.layers.RNN(cell))`, which is equivalent to this API
+2020-12-19 10:00:30,990:WARNING: From /home/gzc/.conda/envs/adca/lib/python3.7/site-packages/tensorflow_core/python/ops/rnn.py:464: dynamic_rnn (from tensorflow.python.ops.rnn) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `keras.layers.RNN(cell)`, which is equivalent to this API
+2020-12-19 10:00:31,052:WARNING: From /home/gzc/.conda/envs/adca/lib/python3.7/site-packages/tensorflow_core/python/ops/rnn_cell_impl.py:958: Layer.add_variable (from tensorflow.python.keras.engine.base_layer) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `layer.add_weight` method instead.
+2020-12-19 10:00:31,059:WARNING: From /home/gzc/.conda/envs/adca/lib/python3.7/site-packages/tensorflow_core/python/ops/rnn_cell_impl.py:962: calling Zeros.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+2020-12-19 10:00:31,075:WARNING: From /home/gzc/.conda/envs/adca/lib/python3.7/site-packages/tensorflow_core/python/ops/rnn.py:244: where (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2020-12-19 10:00:31,192:WARNING: From model.py:164: The name tf.get_variable is deprecated. Please use tf.compat.v1.get_variable instead.
+
+2020-12-19 10:00:31,214:WARNING: From model.py:76: dense (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.Dense instead.
+2020-12-19 10:00:31,214:WARNING: From /home/gzc/.conda/envs/adca/lib/python3.7/site-packages/tensorflow_core/python/layers/core.py:187: Layer.apply (from tensorflow.python.keras.engine.base_layer) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `layer.__call__` method instead.
+2020-12-19 10:00:31,229:WARNING: From model.py:80: The name tf.trainable_variables is deprecated. Please use tf.compat.v1.trainable_variables instead.
+
+2020-12-19 10:00:31,237:WARNING: From model.py:87: The name tf.train.AdamOptimizer is deprecated. Please use tf.compat.v1.train.AdamOptimizer instead.
+
+2020-12-19 10:00:31,810:WARNING: From model.py:92: The name tf.global_variables_initializer is deprecated. Please use tf.compat.v1.global_variables_initializer instead.
+
+2020-12-19 10:00:31,810:INFO: ===========test===========
+2020-12-19 10:00:31,810:WARNING: From model.py:128: The name tf.ConfigProto is deprecated. Please use tf.compat.v1.ConfigProto instead.
+
+2020-12-19 10:00:31,811:WARNING: From model.py:130: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
+
+2020-12-19 10:00:34,780:WARNING: From model.py:132: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+2020-12-19 10:00:34,780:WARNING: From model.py:132: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+2020-12-19 10:00:34,813:INFO: Restoring parameters from ./model/2020-12-19 09-58-31/-630

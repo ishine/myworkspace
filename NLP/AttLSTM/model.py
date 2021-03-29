@@ -169,10 +169,14 @@ class AttLSTM():
         # For each of the timestamps its vector of size A from `v` is reduced with `u` vector
         vu = tf.tensordot(v, u_omega, axes=1, name='vu')  # (B,T) shape
         alphas = tf.nn.softmax(vu, name='alphas')  # (B,T) shape
+        print(v)
+        print(vu)
+        print(alphas)
+        
 
         # Output of (Bi-)RNN is reduced with attention vector; the result has (B,D) shape
         output = tf.reduce_sum(inputs * tf.expand_dims(alphas, -1), 1)
-
+        print(output)
         # Final output with tanh
         output = tf.tanh(output)
 
